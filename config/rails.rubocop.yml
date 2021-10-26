@@ -1,0 +1,33 @@
+# Linting specific for the Ruby on Rails applications
+require: rubocop-rails
+
+# Exclude files that are auto-generated
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - bin/**/*
+    - tmp/**/*
+
+Rails:
+  Enabled: true
+
+# Rake tasks can grow quite long, with many lines. Concerns with more than a little functionality can
+# also feature long blocks.
+Metrics/BlockLength:
+  Exclude:
+    - '**/*.rake'
+    - app/controllers/concerns/**/*.rb
+    - app/models/concerns/**/*.rb
+    - config/environments/*.rb
+
+# Migrations and rake tasks can grow quite long, and this is valid.
+Metrics/MethodLength:
+  Exclude:
+    - libs/tasks/*/**.rake
+    - 'db/migrate/*'
+
+# Currently an issue with this cop and seems to require the MySQL adapter version of schema.rb to be committed
+# in order to determine whether columns have a unique index:
+# @see https://github.com/rubocop-hq/rubocop-rails/issues/226
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false

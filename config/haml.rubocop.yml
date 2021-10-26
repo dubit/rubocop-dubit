@@ -1,0 +1,4 @@
+# Linting for HAML files
+# @see https://github.com/sds/haml-lint
+
+require:  haml_lint

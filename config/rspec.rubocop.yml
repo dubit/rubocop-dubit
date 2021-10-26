@@ -1,0 +1,33 @@
+# Linting for the RSpec test suites
+
+require:
+  - rubocop-rspec
+
+# You pass blocks to describe and context methods, that grow with the number of specs inside them. It's valid
+# to have many specs in a single describe or context definition.
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+
+# Request and acceptance tests are integration tests, that verify many different steps or final outputs. This
+# requires multiple assertions.
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/requests/**/*.rb'
+    - 'spec/acceptance/**/*.rb'
+
+# Request and acceptance tests are integration tests, and often involve many steps to complete the user journey,
+# so often require many lines to achieve this.
+RSpec/ExampleLength:
+  Max: 20
+  Exclude:
+    - 'spec/request/**/*.rb'
+    - 'spec/acceptance/**/*.rb'
+
+# Allow starting context descriptions with any of these words
+RSpec/ContextWording:
+  Prefixes:
+    - Given
+    - when
+    - and
+    - with

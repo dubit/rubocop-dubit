@@ -1,0 +1,11 @@
+inherit_mode:
+  # Lists the options that should be merged rather than overridden from the below files. Without it, the last
+  # file that specifies the rule will take effect and all configuration in the files above it will be ignored.
+  merge:
+    - Exclude
+
+inherit_from:
+  - ruby.rubocop.yml
+  - rails.rubocop.yml
+  - haml.rubocop.yml
+  - rspec.rubocop.yml
