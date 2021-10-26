@@ -1,6 +1,7 @@
-require: rubocop-performance
-
 # Linting for the Ruby language
+
+require:
+  - rubocop-performance
 
 # Raise linting errors for code lines longer than 120 characters (about half the width of a modern laptop screen)
 Layout/LineLength:
