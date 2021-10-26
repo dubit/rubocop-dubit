@@ -1,4 +1,4 @@
-# Dubit Ruby Styleguide
+# RuboCop Dubit
 
 Composable `.rubocop` configuration files for Dubit's styleguides for Ruby, Rails, RSpec and Haml.
 
