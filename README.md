@@ -12,7 +12,7 @@ Add `rubocop-dubit` to your Gemfile and then run `bundle install`:
 # Gemfile
 gem 'rubocop-dubit', git: 'git@github.com:dubit/rubocop-dubit.git', require: false
 ```
-å
+
 Then inherit the default rules by adding the following in your project:
 
 ```yaml
