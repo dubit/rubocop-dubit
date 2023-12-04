@@ -15,9 +15,9 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'rake', '~> 13'
 
-  spec.add_dependency 'haml_lint', '~> 0.37.1'
-  spec.add_dependency 'rubocop', '~> 1.22.2'
-  spec.add_dependency 'rubocop-performance', '~> 1.11.5'
-  spec.add_dependency 'rubocop-rails', '~> 2.12.4'
-  spec.add_dependency 'rubocop-rspec', '~> 2.5.0'
+  spec.add_dependency 'haml_lint', '~> 0.51.0'
+  spec.add_dependency 'rubocop', '~> 1.58.0'
+  spec.add_dependency 'rubocop-performance', '~> 1.19.1'
+  spec.add_dependency 'rubocop-rails', '~> 2.22.2'
+  spec.add_dependency 'rubocop-rspec', '~> 2.25.0'
 end
