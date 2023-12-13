@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'rubocop-dubit'
-  spec.version       = '1.2.0'
+  spec.version       = '1.2.1'
   spec.authors       = ['Dubit Limited']
   spec.email         = ['ops@dubitlimited.com']
 
