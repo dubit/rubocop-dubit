@@ -1,3 +1,9 @@
+# 1.2.1
+
+* Updated `Style/HashSyntax: EnforcedShorthandSyntax` to never
+* Updated `Rails/ActionOrder: ExpectedOrder``
+* Re-ordered config
+
 # 1.2.0
 
 * Switch development to ruby 3.0.6
