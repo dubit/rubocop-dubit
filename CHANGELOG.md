@@ -1,3 +1,12 @@
+# 1.3.0
+
+* Switch development to ruby 3.1.6
+* Updated dependency 'haml_lint', '~> 0.58.0'
+* Updated dependency 'rubocop', '~> 1.66.1'
+* Updated dependency 'rubocop-performance', '~> 1.22.* Updated
+* Updated dependency 'rubocop-rails', '~> 2.26.1'
+* Updated dependency 'rubocop-rspec', '~> 3.0.5'
+
 # 1.2.1
 
 * Updated `Style/HashSyntax: EnforcedShorthandSyntax` to never
