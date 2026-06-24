@@ -1,3 +1,10 @@
+# Merge (rather than override) list-valued keys such as `Exclude` when combining the language-,
+# framework- and test-specific configs below. Without this, each file's `Metrics/BlockLength: Exclude`
+# would clobber the previous one and only the last-loaded list (rspec) would survive.
+inherit_mode:
+  merge:
+    - Exclude
+
 inherit_from:
   - ruby.rubocop.yml
   - rails.rubocop.yml

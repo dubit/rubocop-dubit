@@ -1,3 +1,15 @@
+# 2.1.0
+
+* Fixed `Metrics/BlockLength` excludes being silently dropped. The language-, framework- and
+  test-specific configs each define `Metrics/BlockLength: Exclude`, but `inherit_from` overrides
+  list-valued keys by default, so only the last-loaded list (rspec's `spec/**/*.rb`) survived —
+  the `Guardfile`, `**/*.rake`, concerns and `config/environments/*.rb` excludes were lost in every
+  consuming project. Added `inherit_mode: merge: [Exclude]` to `config/default.yml` so they merge.
+* Disabled `Style/Documentation` — Dubit's apps and internal libraries are not public gems, so
+  mandatory top-level documentation comments add noise without value.
+* Excluded `db/migrate/*` from `Metrics/AbcSize`, `Rails/SkipsModelValidations` and
+  `Rails/ThreeStateBooleanColumn`; migrations are historical and frequently auto-generated.
+
 # 2.0.0
 
 Major release: requires RuboCop 1.72+ (plugin system) and Ruby 3.3+. Consuming projects should

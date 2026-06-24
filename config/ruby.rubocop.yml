@@ -36,3 +36,8 @@ Naming/RescuedExceptionsVariableName:
 
 Style/HashSyntax:
   EnforcedShorthandSyntax: never
+
+# Dubit's apps and internal libraries are not public gems, so mandatory top-level class/module
+# documentation comments add noise (migrations, initializers, small service objects) without value.
+Style/Documentation:
+  Enabled: false

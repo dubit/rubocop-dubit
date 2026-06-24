@@ -28,6 +28,21 @@ Metrics/MethodLength:
     - libs/tasks/*/**.rake
     - 'db/migrate/*'
 
+# Migration `change`/`up`/`down` methods routinely have a high ABC size (many column/table calls)
+# and refactoring them adds no value.
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/*'
+
+# Migrations are historical and frequently auto-generated; they legitimately bulk-update rows and
+# define columns without the conventions enforced on application code.
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'db/migrate/*'
+Rails/ThreeStateBooleanColumn:
+  Exclude:
+    - 'db/migrate/*'
+
 # Set rails actions in standard CRUD order
 Rails/ActionOrder:
   ExpectedOrder:
