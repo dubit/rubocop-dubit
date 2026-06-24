@@ -1,5 +1,7 @@
 # Linting specific for the Ruby on Rails applications
-require: rubocop-rails
+plugins:
+  - rubocop-rails
+  - rubocop-rake
 
 # Exclude files that are auto-generated
 AllCops:

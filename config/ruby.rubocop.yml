@@ -1,20 +1,15 @@
 # Linting for the Ruby language
 
-require:
+plugins:
   - rubocop-performance
+
+AllCops:
+  # Opt in to cops added in new RuboCop releases rather than silently leaving them pending.
+  NewCops: enable
 
 # Raise linting errors for code lines longer than 120 characters (about half the width of a modern laptop screen)
 Layout/LineLength:
   Max: 120
-
-Layout/SpaceAroundMethodCallOperator: # Added in (0.82)
-  Enabled: true
-
-Lint/RaiseException: # Added in (0.81)
-  Enabled: true
-
-Lint/StructNewOverride: # Added in (0.81)
-  Enabled: true
 
 # The cop measures complexity of methods (nesting, branches, etc)
 # @see http://wiki.c2.com/?AbcMetric%20and%20https://en.wikipedia.org/wiki/ABC_Software_Metric
@@ -39,17 +34,5 @@ Metrics/MethodLength:
 Naming/RescuedExceptionsVariableName:
   PreferredName: 'error'
 
-Style/ExponentialNotation: # Added in (0.82)
-  Enabled: true
-
-Style/HashEachMethods: # Added in (0.80)
-  Enabled: true
-
 Style/HashSyntax:
   EnforcedShorthandSyntax: never
-
-Style/HashTransformKeys: # Added in (0.80)
-  Enabled: true
-
-Style/HashTransformValues: # Added in (0.80)
-  Enabled: true

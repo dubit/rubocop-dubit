@@ -1,7 +1,11 @@
 # Linting for the RSpec test suites
+# rubocop-rspec 3.x extracted the FactoryBot and Capybara cops into separate gems, so they are
+# loaded explicitly here alongside rubocop-rspec.
 
-require:
+plugins:
   - rubocop-rspec
+  - rubocop-factory_bot
+  - rubocop-capybara
 
 # You pass blocks to describe and context methods, that grow with the number of specs inside them. It's valid
 # to have many specs in a single describe or context definition.
